@@ -9,6 +9,8 @@ Listagem básica dos pontos turísticos ( Lista resumida )
 
 Listagem completa dos pontos turísticos
 
+Listagem por Cidade
+
 Detalhe de um ponto turístico
 
 Atualização de um ponto turístico por usuários autorizados
