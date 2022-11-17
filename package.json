@@ -1,0 +1,30 @@
+{
+    "name": "pontos_turisticos",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:lmfreire/pontos_turisticos.git",
+    "author": "lmfreire <l.matheus.freire10@gmil.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "ts-node-dev src/server.ts"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.14",
+        "@types/node": "^18.11.9",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^4.8.4"
+    },
+    "dependencies": {
+        "@prisma/client": "^4.6.0",
+        "@types/bcryptjs": "^2.4.2",
+        "@types/jsonwebtoken": "^8.5.9",
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "jsonwebtoken": "^8.5.1",
+        "pg": "^8.8.0",
+        "prisma": "^4.6.0",
+        "reflect-metadata": "^0.1.13"
+    }
+}

@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  password String
+
+  @@map("user")
+}
+
+model Fotos{
+  id String @id @default(uuid())
+  url String
+  pontos_turisticos_id String
+  pontos_turisticos PontosTuristicos @relation(fields: [pontos_turisticos_id], references: [id])
+  
+  @@map("fotos")
+}
+
+model PontosTuristicos{
+  id String @id @default(uuid())
+  tipo String
+  localizacao String
+  descricao String
+  cidade_id String
+  cidade Cidade @relation(fields: [cidade_id], references: [id])
+  Fotos Fotos[]
+
+  @@map("pontos_turisticos")
+}
+
+model Cidade{
+  id String @id @default(uuid())
+  nome String @unique
+  estado String
+  PontosTuristicos PontosTuristicos[]
+
+  @@map("cidade")
+}
